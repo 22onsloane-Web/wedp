@@ -158,13 +158,13 @@ if ($conn->connect_error) {
 
           <div style='padding:20px;font-weight: bold;'>
           <div style='text-align:center;'>
-            <img src='https://tdmap2025.22onsloane.co/web_banner002_1681x879.png' alt='TDMA logo' style='width:100%; margin-bottom:30px;' />
+            <img src='https://tdmap2025.22onsloane.co/banner.png' alt='Wedp logo' style='width:100%; margin-bottom:30px;' />
           </div>
 
           <!-- Message Body -->
           <p style='font-size:16px; color:#6980a3; font-weight:bold'>Dear $name,</p></br>
           <p style='font-size:16px; color:#6980a3; line-height:1.6;'>
-            Thank you for submitting your application to join the Township Digital Market Access Programme. We appreciate your interest in contributing to this global initiative and helping shape the future of entrepreneurship.
+            Thank you for submitting your application to join the Women Entrepreneurship Development Programme. We appreciate your interest in contributing to this global initiative and helping shape the future of entrepreneurship.
           </p>
 
           <p style='font-size:16px; color:#6980a3; line-height:1.6;'>
@@ -176,7 +176,6 @@ if ($conn->connect_error) {
 
           <!-- Partner Logos -->
           <div style='margin-top:40px; display:flex; justify-content:start; align-items:center;'>
-            <img src='https://tdmap2025.22onsloane.co/uksatech.png' alt='Partner Logos' style='height:48px;' />
             <img src='https://tdmap2025.22onsloane.co/logo.png' alt='Partner Logos' style='height:48px;' />
           </div>
           </div>
@@ -256,7 +255,7 @@ font-size: 16px;
 <div class="modalContent">
 <img src="https://tdmap2025.22onsloane.co/logo.png" alt="SU20 Logo" />
 <h2>Thank You for your submission</h2>
-<p>Your application has been received. We appreciate your interest in joining the Township Digital Market Access Programme. We will review your submission and contact you shortly.</p>
+<p>Your application has been received. We appreciate your interest in joining the Women Entrepreneurship Development Programme. We will review your submission and contact you shortly.</p>
 <button onclick="document.getElementById('thankYouModal').style.display='none'; setTimeout(() => { window.location.href = 'https://www.22onsloane.co/h/'; }, 500);">Close</button>
 
 </div>
