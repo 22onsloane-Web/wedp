@@ -137,7 +137,7 @@ if ($conn->connect_error) {
               $mail->Port       = 587;
 
               $mail->setFrom('noreply@22onsloane.co', '22 On Sloane Team');
-              $mail->addAddress($email, $fullname);
+              $mail->addAddress($email, $name);
               $mail->addReplyTo('noreply@22onsloane.co', '22 On Sloane Team');
 
 
@@ -162,7 +162,7 @@ if ($conn->connect_error) {
           </div>
 
           <!-- Message Body -->
-          <p style='font-size:16px; color:#6980a3; font-weight:bold'>Dear $full_name,</p></br>
+          <p style='font-size:16px; color:#6980a3; font-weight:bold'>Dear $name,</p></br>
           <p style='font-size:16px; color:#6980a3; line-height:1.6;'>
             Thank you for submitting your application to join the Township Digital Market Access Programme. We appreciate your interest in contributing to this global initiative and helping shape the future of entrepreneurship.
           </p>
