@@ -1,0 +1,56 @@
+[15-Apr-2025 08:38:26 Europe/Berlin] PHP Warning:  Undefined array key "registration_number" in C:\xampp\htdocs\su20-website\register_tdma.php on line 49
+[15-Apr-2025 08:38:26 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\su20-website\register_tdma.php on line 49
+[15-Apr-2025 08:38:26 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: implode(): Argument #2 ($array) must be of type ?array, string given in C:\xampp\htdocs\su20-website\register_tdma.php:66
+Stack trace:
+#0 C:\xampp\htdocs\su20-website\register_tdma.php(66): implode(', ', 'tablet')
+#1 {main}
+  thrown in C:\xampp\htdocs\su20-website\register_tdma.php on line 66
+[15-Apr-2025 08:39:40 Europe/Berlin] PHP Warning:  Undefined array key "registration_number" in C:\xampp\htdocs\su20-website\register_tdma.php on line 49
+[15-Apr-2025 08:39:40 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\su20-website\register_tdma.php on line 49
+[15-Apr-2025 08:39:40 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: implode(): Argument #2 ($array) must be of type ?array, string given in C:\xampp\htdocs\su20-website\register_tdma.php:66
+Stack trace:
+#0 C:\xampp\htdocs\su20-website\register_tdma.php(66): implode(', ', 'tablet')
+#1 {main}
+  thrown in C:\xampp\htdocs\su20-website\register_tdma.php on line 66
+[15-Apr-2025 08:40:02 Europe/Berlin] PHP Warning:  Undefined array key "registration_number" in C:\xampp\htdocs\su20-website\register_tdma.php on line 49
+[15-Apr-2025 08:40:02 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\su20-website\register_tdma.php on line 49
+[15-Apr-2025 08:40:02 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: implode(): Argument #2 ($array) must be of type ?array, string given in C:\xampp\htdocs\su20-website\register_tdma.php:66
+Stack trace:
+#0 C:\xampp\htdocs\su20-website\register_tdma.php(66): implode(', ', 'tablet')
+#1 {main}
+  thrown in C:\xampp\htdocs\su20-website\register_tdma.php on line 66
+[15-Apr-2025 08:41:25 Europe/Berlin] PHP Warning:  Undefined array key "registration_number" in C:\xampp\htdocs\su20-website\register_tdma.php on line 49
+[15-Apr-2025 08:41:25 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\su20-website\register_tdma.php on line 49
+[15-Apr-2025 08:41:25 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: implode(): Argument #2 ($array) must be of type ?array, string given in C:\xampp\htdocs\su20-website\register_tdma.php:66
+Stack trace:
+#0 C:\xampp\htdocs\su20-website\register_tdma.php(66): implode(', ', 'tablet')
+#1 {main}
+  thrown in C:\xampp\htdocs\su20-website\register_tdma.php on line 66
+[15-Apr-2025 08:42:31 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: implode(): Argument #2 ($array) must be of type ?array, string given in C:\xampp\htdocs\su20-website\register_tdma.php:66
+Stack trace:
+#0 C:\xampp\htdocs\su20-website\register_tdma.php(66): implode(', ', 'smartphone')
+#1 {main}
+  thrown in C:\xampp\htdocs\su20-website\register_tdma.php on line 66
+[15-Apr-2025 08:44:26 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: implode(): Argument #2 ($array) must be of type ?array, string given in C:\xampp\htdocs\su20-website\register_tdma.php:66
+Stack trace:
+#0 C:\xampp\htdocs\su20-website\register_tdma.php(66): implode(', ', 'none')
+#1 {main}
+  thrown in C:\xampp\htdocs\su20-website\register_tdma.php on line 66
+[15-Apr-2025 08:45:21 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: implode(): Argument #2 ($array) must be of type ?array, string given in C:\xampp\htdocs\su20-website\register_tdma.php:66
+Stack trace:
+#0 C:\xampp\htdocs\su20-website\register_tdma.php(66): implode(', ', 'computer')
+#1 {main}
+  thrown in C:\xampp\htdocs\su20-website\register_tdma.php on line 66
+[15-Apr-2025 08:48:17 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Column count doesn't match value count at row 1 in C:\xampp\htdocs\su20-website\register_tdma.php:69
+Stack trace:
+#0 C:\xampp\htdocs\su20-website\register_tdma.php(69): mysqli->prepare('INSERT INTO app...')
+#1 {main}
+  thrown in C:\xampp\htdocs\su20-website\register_tdma.php on line 69
+[15-Apr-2025 08:51:05 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'full_name' in 'field list' in C:\xampp\htdocs\su20-website\register_tdma.php:83
+Stack trace:
+#0 C:\xampp\htdocs\su20-website\register_tdma.php(83): mysqli->query('INSERT INTO app...')
+#1 {main}
+  thrown in C:\xampp\htdocs\su20-website\register_tdma.php on line 83
+[15-Apr-2025 09:14:14 Europe/Berlin] PHP Warning:  Undefined variable $ecommerce_platfrom in C:\xampp\htdocs\su20-website\register_tdma.php on line 79
+[15-Apr-2025 09:26:29 Europe/Berlin] PHP Warning:  Undefined array key "device" in C:\xampp\htdocs\su20-website\register_tdma.php on line 66
+[15-Apr-2025 09:26:29 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\su20-website\register_tdma.php on line 66
