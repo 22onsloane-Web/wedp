@@ -164,7 +164,7 @@ if ($conn->connect_error) {
           <!-- Message Body -->
           <p style='font-size:16px; color:#6980a3; font-weight:bold'>Dear $name,</p></br>
           <p style='font-size:16px; color:#6980a3; line-height:1.6;'>
-            Thank you for submitting your application to join the Women Entrepreneurship Development Programme. We appreciate your interest in contributing to this global initiative and helping shape the future of entrepreneurship.
+            Thank you for submitting your application to join the African Bank Women Entrepreneurship Development Programme. We appreciate your interest in contributing to this global initiative and helping shape the future of entrepreneurship.
           </p>
 
           <p style='font-size:16px; color:#6980a3; line-height:1.6;'>
@@ -255,7 +255,7 @@ font-size: 16px;
 <div class="modalContent">
 <img src="https://tdmap2025.22onsloane.co/logo.png" alt="SU20 Logo" />
 <h2>Thank You for your submission</h2>
-<p>Your application has been received. We appreciate your interest in joining the Women Entrepreneurship Development Programme. We will review your submission and contact you shortly.</p>
+<p>Your application has been received. We appreciate your interest in joining the African Bank Women Entrepreneurship Development Programme. We will review your submission and contact you shortly.</p>
 <button onclick="document.getElementById('thankYouModal').style.display='none'; setTimeout(() => { window.location.href = 'https://www.22onsloane.co/h/'; }, 500);">Close</button>
 
 </div>

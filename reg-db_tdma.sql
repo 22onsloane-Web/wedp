@@ -1,7 +1,8 @@
 CREATE DATABASE IF NOT EXISTS business_applications;
 USE business_applications;
 
-CREATE TABLE applicant (
+CREATE TABLE applicant (    
+    id INT AUTO_INCREMENT PRIMARY KEY,
     full_name VARCHAR(255) ,
     surname VARCHAR(255) , 
     id_number VARCHAR(255) ,
