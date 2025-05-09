@@ -37,7 +37,7 @@ CREATE TABLE applicant (
     delivery_platform VARCHAR(255),
     other_delivery VARCHAR(255),
     
-     id_doc_url VARCHAR(255),
+    id_doc_url VARCHAR(255),
    
 
     industry_compliance_url VARCHAR(255),

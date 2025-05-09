@@ -1,41 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <meta charset='UTF-8'>
+<meta charset="UTF-8">
+<title>Submission Successful</title>
+<style>
+#thankYouModal {
+display: flex;
+position: fixed;
+top: 0; left: 0;
+width: 100%; height: 100%;
+background: rgba(0,0,0,0.6);
+justify-content: center;
+align-items: center;
+z-index: 9999;
+font-family: Arial, sans-serif;
+}
+.modalContent {
+background: #fff;
+border-radius: 12px;
+padding: 30px;
+max-width: 500px;
+width: 90%;
+text-align: center;
+box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+.modalContent img {
+width: 80px;
+margin-bottom: 15px;
+}
+.modalContent h2 {
+color: #2b2b2b;
+font-size: 22px;
+}
+.modalContent p {
+color: #555;
+font-size: 15px;
+}
+.modalContent button {
+margin-top: 20px;
+background: #007a3d;
+color: #fff;
+border: none;
+padding: 12px 25px;
+border-radius: 25px;
+cursor: pointer;
+font-size: 16px;
+}
+</style>
+<script>
+              function redirectToHome() {
+                  window.location.href = 'https://www.22onsloane.co/h/';
+              }
+          </script>
 </head>
-<body style='margin:0; padding:0;  font-family:Arial, sans-serif;'>
+<body>
+<div id="thankYouModal">
+<div class="modalContent">
+<img src="https://tdmap2025.22onsloane.co/logo.png" alt="SU20 Logo" style="width: 50%;" />
+<h2>Thank You for your submission</h2>
+<p>Your application has been received. We appreciate your interest in joining the African Bank Women Entrepreneurship Development Programme. We will review your submission and contact you shortly.</p>
+<button onclick="document.getElementById('thankYouModal').style.display='none'; setTimeout(() => { window.location.href = 'https://www.22onsloane.co/h/'; }, 500);">Close</button>
 
-  <div style='max-width:650px; margin:40px auto; background-repeat: no-repeat; background-position: center top; background-size: cover; position: relative;'>
-
-  
-
-    <div style='padding:20px;font-weight: bold;'>
-    <div style='text-align:center;'>
-      <img src='https://tdmap2025.22onsloane.co/web_banner002_1681x879.png' alt='TDMA logo' style='width:100%; margin-bottom:30px;' />
-    </div>
-
-    <!-- Message Body -->
-    <p style='font-size:16px; color:#6980a3; font-weight:bold'>Dear $full_name,</p></br>
-    <p style='font-size:16px; color:#6980a3; line-height:1.6;'>
-      Thank you for submitting your application to join the Township Digital Market Access Programme. We appreciate your interest in contributing to this global initiative and helping shape the future of entrepreneurship.
-    </p>
-
-    <p style='font-size:16px; color:#6980a3; line-height:1.6;'>
-    </br>Your application has been received, and is currently under review. You will receive feedback as soon as the evaluation process is complete.
-    </p>
-      </br>
-    <p style='font-size:16px; color:#6980a3; line-height:1.6;'> If you do not hear from us within 2 months, please consider your application unsuccessful </p>
-    <p style='font-size:16px; color:#6980a3; margin-top:30px;'>Kind regards,<br><strong>22 On Sloane</strong></p>
-
-    <!-- Partner Logos -->
-    <div style='margin-top:40px; display:flex; justify-content:start; align-items:center;'>
-      <img src='https://tdmap2025.22onsloane.co/uksatech.png' alt='Partner Logos' style='height:48px;' />
-      <img src='https://tdmap2025.22onsloane.co/logo.png' alt='Partner Logos' style='height:48px;' />
-    </div>
-    </div>
- 
-
-  </div>
+</div>
+</div>
 </body>
 </html>
+HTML;
