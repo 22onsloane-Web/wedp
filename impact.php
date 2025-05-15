@@ -1,8 +1,8 @@
 <?php
 $host = "dedi332.cpt3.host-h.net";
-$username = "scbpoahnxj_1";
-$password = "jHLwh4hxcUi8b3wqCSS8";
-$database = "scbpoahnxj_db1";
+$username = "tdmaputmxp_1";
+$password = "f8jTTYJVAFi96AWaGvB8";
+$database = "tdmaputmxp_db1";
 
 
 $conn = new mysqli($host, $username, $password, $database);
@@ -50,11 +50,8 @@ $conn->close();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-
         .bg-custom {
             background-color: #fe5c01;
-            background-image: #fe5c01;
-            background: #fe5c01;
             color: white;
         }
 
@@ -66,24 +63,23 @@ $conn->close();
         }
 
         .btn-custom:hover {
-            background-color: #f77f3b; /* Darker shade for hover effect */
+            background-color: #f77f3b;
             color: white;
             transform: translateY(-2px) scale(1.01);
             box-shadow: 0 20px 40px rgba(250, 181, 142, 0.55);
         }
-        
-        </style>
+    </style>
 </head>
 <body class="bg-light">
     <div class="container mt-5">
-        <h2 class="text-center mb-4">SMME Capacity Building Programme - Dashboard</h2>
+        <h2 class="text-center mb-4">African Bank Women Entrepreneurship Development Programme - Dashboard</h2>
+
         <div class="row pt-3 mb-3">
             <div class="col-12">
-                <a href="https://scbp2025.22onsloane.co/export.php"  class="btn btn-custom">View scbp registration data</a>
-                <a href="https://witep2025.22onsloane.co/export.php"  class="d-none mx-4 btn btn-custom">View witep registration data</a>
+                <a href="https://wedp.22onsloane.co/export.php" class="btn btn-custom">View WEDP Registration Data</a>
             </div>
         </div>
-        
+
         <div class="row text-center">
             <div class="col-md-3">
                 <div class="card p-3 shadow">
@@ -110,7 +106,8 @@ $conn->close();
                 </div>
             </div>
         </div>
-        <div class="row text-center">
+
+        <div class="row text-center mt-3">
             <div class="col-md-3">
                 <div class="card p-3 shadow">
                     <h5>Ave Employees / Jobs</h5>
@@ -130,7 +127,7 @@ $conn->close();
                 </div>
             </div>
         </div>
-        
+
         <div class="row mt-4">
             <div class="col-md-8">
                 <canvas id="applicationsChart"></canvas>
@@ -139,8 +136,9 @@ $conn->close();
                 <canvas id="provinceChart"></canvas>
             </div>
         </div>
+
     </div>
-    
+
     <script>
         new Chart(document.getElementById('applicationsChart'), {
             type: 'bar',
@@ -152,9 +150,11 @@ $conn->close();
                     backgroundColor: 'rgba(54, 162, 235, 0.6)'
                 }]
             },
-            options: { responsive: true }
+            options: {
+                responsive: true
+            }
         });
-        
+
         new Chart(document.getElementById('provinceChart'), {
             type: 'pie',
             data: {
@@ -179,3 +179,4 @@ $conn->close();
     </script>
 </body>
 </html>
+

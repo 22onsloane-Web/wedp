@@ -254,12 +254,10 @@ if ($file1) {
 </body>
 </html>
 HTML;
-
         } else {
             echo "Oops, error saving data: " . $conn->error;
         }
     }
-
     $conn->close();
 }
 ?>
