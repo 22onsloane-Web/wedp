@@ -1,68 +1,529 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Submission Successful</title>
-<style>
-#thankYouModal {
-display: flex;
-position: fixed;
-top: 0; left: 0;
-width: 100%; height: 100%;
-background: rgba(0,0,0,0.6);
-justify-content: center;
-align-items: center;
-z-index: 9999;
-font-family: Arial, sans-serif;
-}
-.modalContent {
-background: #fff;
-border-radius: 12px;
-padding: 30px;
-max-width: 500px;
-width: 90%;
-text-align: center;
-box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-.modalContent img {
-width: 80px;
-margin-bottom: 15px;
-}
-.modalContent h2 {
-color: #2b2b2b;
-font-size: 22px;
-}
-.modalContent p {
-color: #555;
-font-size: 15px;
-}
-.modalContent button {
-margin-top: 20px;
-background: #007a3d;
-color: #fff;
-border: none;
-padding: 12px 25px;
-border-radius: 25px;
-cursor: pointer;
-font-size: 16px;
-}
-</style>
-<script>
-              function redirectToHome() {
-                  window.location.href = 'https://www.22onsloane.co/h/';
-              }
-          </script>
-</head>
-<body>
-<div id="thankYouModal">
-<div class="modalContent">
-<img src="https://tdmap2025.22onsloane.co/logo.png" alt="SU20 Logo" style="width: 50%;" />
-<h2>Thank You for your submission</h2>
-<p>Your application has been received. We appreciate your interest in joining the African Bank Women Entrepreneurship Development Programme. We will review your submission and contact you shortly.</p>
-<button onclick="document.getElementById('thankYouModal').style.display='none'; setTimeout(() => { window.location.href = 'https://www.22onsloane.co/h/'; }, 500);">Close</button>
+    <meta charset="utf-8" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-</div>
-</div>
+    <title></title>
+</head>
+<style>
+
+        @font-face {
+            font-family: GENFontTitle;
+            src: url(VAGRoundedStd-Bold.otf);
+        }
+
+        @font-face {
+            font-family: GENFont;
+            src: url(VAGRoundedRegular.ttf);
+        }
+
+        .carousel-caption h1 {
+            font-family: GENFontTitle;
+            letter-spacing: 0.25rem;
+        }
+
+        ;
+
+        .carousel-caption h2 {
+            font-family: GENFont;
+        }
+
+        ;
+
+        .overlay-dark {
+            position: relative;
+        }
+
+        .overlay-dark::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: #000;
+            display: block;
+            opacity: 0.55;
+            z-index: 1;
+        }
+
+        .overlay-content {
+            z-index: 1;
+        }
+        
+        .bg-gradient {
+        
+        background-color: #fdfdfb;
+        background-image: linear-gradient(315deg, #fdfdfb 0%, #6f3ccd 36%, #10131f 66%, #17182d 100%);
+        
+        }
+
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .nav-item a {
+            text-decoration: none;
+            color: black;
+            transition: ease-in 250ms;
+        }
+
+            .nav-item a :hover {
+                color: #FFC107;
+                transition: ease-out 320ms;
+            }
+
+        .card-slide {
+            border-radius: 10px;
+            filter: drop-shadow(0 5px 10px 0 #ffffff);
+            width: auto;
+            height: auto;
+            background-color: #ffffff;
+            position: relative;
+            z-index: 0;
+            overflow: hidden;
+            transition: 0.6s ease-in;
+        }
+
+            .card-slide::before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: -15px;
+                right: -15px;
+                background: #FFC107;
+                height: 250px;
+                width: 25px;
+                border-radius: 32px;
+                transform: scale(1);
+                transform-origin: 50% 50%;
+                transition: transform 0.25s ease-out;
+            }
+
+            .card-slide:hover::before {
+                transition-delay: 0.2s;
+                transform: scale(60);
+            }
+
+            .card-slide:hover {
+                color: #ffffff;
+            }
+
+            .card-slide p {
+                padding: 10px 0;
+            }
+
+        .neo-up {
+            border-radius: 50px;
+            background: linear-gradient(145deg, #f0f0f0, #cacaca);
+            box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+        }
+
+            .neo-up:hover {
+                box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+            }
+
+        .neo-down {
+            border-radius: 50px;
+            background: linear-gradient(145deg, #e6ae06, #ffcf07);
+            box-shadow: 0px 0px 1px #d9a406, 0px 0px 1px #ffde08;
+        }
+
+            .neo-down:hover {
+                background: linear-gradient(145deg, #ffcf07, #e6ae06);
+                box-shadow: 2px 2px 6px #d9a406, -2px -2px 6px #ffde08;
+            }
+
+        .square {
+            height: 40px;
+            width: 40px;
+            float: left;
+        }
+
+        .khosigreen {
+            background-color: #009b95;
+        }
+
+        .khosiblue {
+            background-color: #1c2039;
+        }
+       
+
+        .pic2blue {
+            background: url('img/Khosi Nkosi5011 1.jpg') no-repeat;
+            display: block;
+            width: auto;
+            height: auto;
+        }
+        
+        .bg-gradient-1 {
+        
+        background-color: #3d3c52;
+        background-image: linear-gradient(318deg, #3d3c52 0%, #264a6e 18%, #363d7f 30%, #4a685d 51%, #ce2e2b 69%, #f0bf40 100%);
+        }
+
+        .card-slideg {
+            border-radius: 10px;
+            filter: drop-shadow(0 5px 10px 0 #f4f8fb);
+            width: auto;
+            height: auto;
+            background-color: #f4f8fb;
+            position: relative;
+            z-index: 0;
+            overflow: hidden;
+            transition: 0.6s ease-in;
+        }
+
+            .card-slideg::before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: -15px;
+                right: -15px;
+                background: #d69cfe;
+                height: 250px;
+                width: 25px;
+                border-radius: 32px;
+                transform: scale(1);
+                transform-origin: 50% 50%;
+                transition: transform 0.25s ease-out;
+            }
+
+            .card-slideg:hover::before {
+                transition-delay: 0.2s;
+                transform: scale(60);
+            }
+
+            .card-slideg:hover {
+                color: #ffffff;
+            }
+
+            .card-slideg p {
+                padding: 10px 0;
+            }
+
+            .card-slideb {
+                border-radius: 10px;
+                filter: drop-shadow(0 5px 10px 0 #f4f8fb);
+                width: auto;
+                height: auto;
+                background-color: #f4f8fb;
+                position: relative;
+                z-index: 0;
+                overflow: hidden;
+                transition: 0.6s ease-in;
+            }
+
+            .card-slideb::before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: -15px;
+                right: -15px;
+                background: #fe9c03;
+                height: 250px;
+                width: 25px;
+                border-radius: 32px;
+                transform: scale(1);
+                transform-origin: 50% 50%;
+                transition: transform 0.25s ease-out;
+            }
+
+            .card-slideb:hover::before {
+                transition-delay: 0.2s;
+                transform: scale(60);
+            }
+
+            .card-slideb:hover {
+                color: #ffffff;
+            }
+
+            .card-slideb p {
+                padding: 10px 0;
+            }
+
+            .button-56 {
+                align-items: center;
+                background-color: #f4f8fb;
+                border: 2px solid #2a577c;
+                border-radius: 8px;
+                box-sizing: border-box;
+                color: #1c2039;
+                cursor: pointer;
+                display: inline-block;
+                font-family: Inter, sans-serif;
+                font-size: 16px;
+                height: 48px;
+                justify-content: center;
+                line-height: 24px;
+                max-width: 100%;
+                padding: 0 25px;
+                position: relative;
+                text-align: center;
+                text-decoration: none;
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
+                /* Vendor Prefixes */
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -ms-box-sizing: border-box;
+                box-sizing: border-box;
+                -webkit-touch-action: manipulation;
+                -ms-touch-action: manipulation;
+            }
+
+            .button-56::after {
+                background-color: #425c71;
+                border-radius: 8px;
+                content: "";
+                display: block;
+                height: 48px;
+                left: 0;
+                width: 100%;
+                position: absolute;
+                top: -2px;
+                transform: translate(8px, 8px);
+                transition: transform .2s ease-out;
+                z-index: -1;
+                /* Vendor Prefixes */
+                -webkit-transition: -webkit-transform .2s ease-out;
+                -moz-transition: -moz-transform .2s ease-out;
+                -ms-transition: -ms-transform .2s ease-out;
+                transition: transform .2s ease-out;
+            }
+
+            .button-56:hover::after {
+                transform: translate(0, 0);
+            }
+
+            .button-56:active {
+                background-color: #f4f8fb;
+                outline: 0;
+            }
+
+            .button-56:hover {
+                outline: 0;
+            }
+
+
+        @media (min-width: 768px) {
+            .button-56 {
+                padding: 0 40px;
+            }
+        }
+
+        .bg-greyb {
+            background-color: #f4f8fb;
+        }
+
+        .border-greyb-uk {
+            border-color: #1c456d;
+        }
+
+        .border-b-uk {
+            border-color: #1c456d !important;
+        }
+
+        .card :hover {
+            box-shadow: -1px 2px 30px -4px rgba(84,84,84,0.68);
+            -webkit-box-shadow: -1px 2px 30px -4px rgba(84,84,84,0.68);
+            -moz-box-shadow: -1px 2px 30px -4px rgba(84,84,84,0.68);
+            transition: ease-in-out 320ms;
+        }
+
+        .card-img-top :hover {
+            box-shadow: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+        }
+
+        .card-body :hover {
+            box-shadow: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+        }
+</style>
+
+<body class="bg-gradient">
+    <div class="col-lg-8 mx-auto p-3 py-md-5">
+        <main>
+            <div class="row mb-3">
+                <img src="https://www.22onsloane.co/wp-content/uploads/2025/05/MICROSOFT_DIGITALISATION_V10__1200x627-banner-002.png">
+            </div>
+            <div id="about" class="row mt-5">
+                <h1>Microsoft Tech Entrepreneurship Programme</h1>
+                <p class="fs-5 col-md-12">
+                   The SMME Capacity Building Programme (SCBP) is a twelve (12) month programme that supports businesses with relevant skills and knowledge to grow and sustain their business operations. The programme will support 10 businesses in various sectors.
+                </p>
+            </div>
+
+            <div class="row mt-3 mb-5">
+                <div class="col-12">
+                    <a target=”_blank” style="text-decoration: none;" href="https://scbp.22onsloane.co/" class="text-dark"><button class="button-56" role="button">Apply Now</button></a>
+                    <button class="button-56 mt-sm-3 mx-lg-3" role="button"><a class="text-dark" style="text-decoration: none;" href="tel:0114637602">Contact Us</a></button>
+                </div>
+            </div>
+
+            <hr class="col-3 col-md-2 mb-4">
+
+            <div class="row g-5 mb-3">
+                <h1>Programme Objectives</h1>
+            </div>
+
+            <div class="row pb-3 g-5 mg-5">
+                <div class="col-md-3">
+                    <button class="btn bg-greyb border border-2 border-greyb-uk rounded-4 btn-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" fill="#1c456d" class="bi bi-trophy" viewBox="0 0 16 16">
+                            <path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935zM3.504 1c.007.517.026 1.006.056 1.469.13 2.028.457 3.546.87 4.667C5.294 9.48 6.484 10 7 10a.5.5 0 0 1 .5.5v2.61a1 1 0 0 1-.757.97l-1.426.356a.5.5 0 0 0-.179.085L4.5 15h7l-.638-.479a.501.501 0 0 0-.18-.085l-1.425-.356a1 1 0 0 1-.757-.97V10.5A.5.5 0 0 1 9 10c.516 0 1.706-.52 2.57-2.864.413-1.12.74-2.64.87-4.667.03-.463.049-.952.056-1.469H3.504z" />
+                        </svg>
+                    </button>
+                    <p class="mt-4">
+                        Equip entrepreneurs with the know-how to streamline their business operations for efficiency and scalability.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn bg-greyb border border-2 border-greyb-uk rounded-4 btn-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg"  width="2.5rem" height="2.5rem" fill="#1c456d" class="bi bi-buildings" viewBox="0 0 16 16">
+                        <path d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022M6 8.694 1 10.36V15h5zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5z"/>
+                        <path d="M2 11h1v1H2zm2 0h1v1H4zm-2 2h1v1H2zm2 0h1v1H4zm4-4h1v1H8zm2 0h1v1h-1zm-2 2h1v1H8zm2 0h1v1h-1zm2-2h1v1h-1zm0 2h1v1h-1zM8 7h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zM8 5h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zm0-2h1v1h-1z"/>
+                        </svg>
+                    </button>
+                    <p class="mt-4">
+                        Support entrepreneurs with business operations, marketing, human resources, digital transformation, and financial management tools and knowledge. 
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn bg-greyb border border-2 border-greyb-uk rounded-4 btn-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" fill="#1c456d" class="bi bi-globe-europe-africa" viewBox="0 0 16 16">
+                        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M3.668 2.501l-.288.646a.847.847 0 0 0 1.479.815l.245-.368a.81.81 0 0 1 1.034-.275.81.81 0 0 0 .724 0l.261-.13a1 1 0 0 1 .775-.05l.984.34q.118.04.243.054c.784.093.855.377.694.801-.155.41-.616.617-1.035.487l-.01-.003C8.274 4.663 7.748 4.5 6 4.5 4.8 4.5 3.5 5.62 3.5 7c0 1.96.826 2.166 1.696 2.382.46.115.935.233 1.304.618.449.467.393 1.181.339 1.877C6.755 12.96 6.674 14 8.5 14c1.75 0 3-3.5 3-4.5 0-.262.208-.468.444-.7.396-.392.87-.86.556-1.8-.097-.291-.396-.568-.641-.756-.174-.133-.207-.396-.052-.551a.33.33 0 0 1 .42-.042l1.085.724c.11.072.255.058.348-.035.15-.15.415-.083.489.117.16.43.445 1.05.849 1.357L15 8A7 7 0 1 1 3.668 2.501"/>
+                        </svg>
+                    </button>
+                    <p class="mt-4">
+                        Enable entrepreneurs to understand the financial mechanics behind running a business and supporting it's profitability.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn bg-greyb border border-2 border-greyb-uk rounded-4 btn-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" fill="#1c456d" class="bi bi-database-up" viewBox="0 0 16 16">
+                        <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.354-5.854 1.5 1.5a.5.5 0 0 1-.708.708L13 11.707V14.5a.5.5 0 0 1-1 0v-2.793l-.646.647a.5.5 0 0 1-.708-.708l1.5-1.5a.5.5 0 0 1 .708 0"/>
+                        <path d="M12.096 6.223A5 5 0 0 0 13 5.698V7c0 .289-.213.654-.753 1.007a4.5 4.5 0 0 1 1.753.25V4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16c.536 0 1.058-.034 1.555-.097a4.5 4.5 0 0 1-.813-.927Q8.378 15 8 15c-1.464 0-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13h.027a4.6 4.6 0 0 1 0-1H8c-1.464 0-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10q.393 0 .774-.024a4.5 4.5 0 0 1 1.102-1.132C9.298 8.944 8.666 9 8 9c-1.464 0-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777M3 4c0-.374.356-.875 1.318-1.313C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4"/>
+                    </svg>
+                    </button>
+                    <p class="mt-4">
+                    Technical support & financial investment
+                    </p>
+                </div>
+                <div class="d-none col-md-3">
+                    <button class="btn bg-greyb border border-2 border-greyb-uk rounded-4 btn-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" fill="#1c456d"  class="bi bi-database-up" viewBox="0 0 16 16">
+                        <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.354-5.854 1.5 1.5a.5.5 0 0 1-.708.708L13 11.707V14.5a.5.5 0 0 1-1 0v-2.793l-.646.647a.5.5 0 0 1-.708-.708l1.5-1.5a.5.5 0 0 1 .708 0"/>
+                        <path d="M12.096 6.223A5 5 0 0 0 13 5.698V7c0 .289-.213.654-.753 1.007a4.5 4.5 0 0 1 1.753.25V4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16c.536 0 1.058-.034 1.555-.097a4.5 4.5 0 0 1-.813-.927Q8.378 15 8 15c-1.464 0-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13h.027a4.6 4.6 0 0 1 0-1H8c-1.464 0-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10q.393 0 .774-.024a4.5 4.5 0 0 1 1.102-1.132C9.298 8.944 8.666 9 8 9c-1.464 0-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777M3 4c0-.374.356-.875 1.318-1.313C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4"/>
+                        </svg>
+                    </button>
+                    <p class="mt-4">
+                        Pitch deck development. Pitch deck techniques.
+                </div>
+                <div class="col-md-2">
+                    <p>
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-5 mb-5">
+                <div class="col-md-6">
+                    <div class="card-slideg p-3 shadow-sm border border-light-subtle">
+                        <h2>Microsoft</h2>
+                        <p>
+                        Microsoft Corporation is an American multinational technology company that has been a key player in the computer industry since its founding in 1975.   
+                         We’re on a mission to empower every person and every organization on the planet to achieve more.
+                        </p>
+                    </div>
+                    <div class="mt-4">
+                        <button class="button-56" role="button"><a class="text-dark" style="text-decoration: none;" href="https://www.microsoft.com/en-us/about">Learn More</a></button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-slideb p-3 shadow-sm border border-light-subtle">
+                        <h2>22 On Sloane</h2>
+                        <p>
+                            22 On Sloane is the largest startup campus and entrepreneurship hub in Africa. The campus offers startups and innovative SMMEs a complete turnkey solution to scale, from the initial idea to commercialisation, funding opportunities and access to markets.</p>
+                    </div>
+                    <div class="mt-4">
+                        <button class="button-56" role="button"><a class="text-dark" style="text-decoration: none;" href="https://22onsloane.co/">Learn More</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="col-3 col-md-2 mb-4">
+            
+            <div id="Registernow" class="row g-5 mb-1 d-none">
+                <h1>Apply Now</h1>
+            </div>
+            
+            
+
+            <div id="GamingEvents" class="d-none row g-5 mb-3">
+                <h1>The 2024 Cohort</h1>
+            </div>
+
+
+                        <div class="d-none row g-5 mb-2">
+
+                <div class="col-md-4">
+                    <div class="card bg-greyb">
+                        <img src="https://www.22onsloane.co/wp-content/uploads/2023/11/sloane-card1-1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Business Name</h5>
+                            <p class="card-text"><span style="color: red;"><strong>Website coming soon</strong></span><br>Business key services<br>Operating Area</p>
+                            <a href="#" class="btn btn-dark text-white">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+<div class="col-md-4">
+                    <div class="card bg-greyb">
+                        <img src="https://www.22onsloane.co/wp-content/uploads/2023/11/sloane-card4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Business Name</h5>
+                            <p class="card-text"><br>Business key services<br>Operating Area</p>
+                            <a href="https://www.22onsloane.co/22-on-sloanes-ecosystem-day/" class="btn btn-dark text-white">Register To Attend</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card bg-greyb">
+                        <img src="https://www.22onsloane.co/wp-content/uploads/2023/11/sloane-card0.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Business Name</h5>
+                            <p class="card-text"><strong>Business key services</strong><br>Date: 15 November 2024<br>Venue: 22 On Sloane</p>
+                            <a href="https://www.22onsloane.co/startup-huddle-creative-arts-tech-business-digitizing-the-creative-arts/" class="btn btn-dark text-white">Register to Attend</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+
 </body>
 </html>
-HTML;

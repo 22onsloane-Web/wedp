@@ -36,32 +36,14 @@ CREATE TABLE applicant (
     futur_ecommerce VARCHAR(255),
     delivery_platform VARCHAR(255),
     other_delivery VARCHAR(255),
-    
     id_doc_url VARCHAR(255),
-   
-
     industry_compliance_url VARCHAR(255),
-   
-
     residence_address_url VARCHAR(255),
-    
-
     tax_clearance_url VARCHAR(255),
- 
-
     registration_doc_url VARCHAR(255),
-   
-
     bbbee_doc_url VARCHAR(255),
-   
-
     bank_statement_url VARCHAR(255),
-
-
     company_profile_url VARCHAR(255),
-    
-
-   
     submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
